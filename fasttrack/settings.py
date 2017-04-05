@@ -101,3 +101,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# application file space
+UPLOADS_ROOT = os.path.join(BASE_DIR, 'uploads/apps')
+os.makedirs(UPLOADS_ROOT, exist_ok=True)
