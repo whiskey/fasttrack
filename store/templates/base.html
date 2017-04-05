@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="My little AppStore">
+    <link rel="stylesheet" type="text/css" href="{% static 'store/style.css' %}" />
+</head>
+<body>
+
+<div class="authentication-container">
+{% if user.is_authenticated %}
+    <ul>
+        <li><a href="{% url 'logout' %}">logout</a></li>
+    </ul>
+{% else %}
+    <ul>
+        <li><a href="{% url 'login' %}">login</a></li>
+        <li><a href="{% url 'signup' %}">signup</a></li>
+    </ul>
+{% endif %}
+</div>
+
+<div class="content-container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

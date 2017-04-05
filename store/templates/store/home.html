@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}FastTrack{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    {% if app_list %}
+    <ul>
+        {% for app in app_list %}
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No applications available.</p>
+    {% endif%}
+    {% endif %}
+{% endblock %}
