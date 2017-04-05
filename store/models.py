@@ -16,6 +16,7 @@ class MobileApp(models.Model):
 
     # currently one app per platform - might change later!
     app_platform = models.CharField(max_length=1, choices=APPLICATION_PLATFORM, default='0')
+    # FIXME: join uploads root with app id
     app_binary = models.FileField(upload_to=UPLOADS_ROOT, verbose_name='Application Binary',
                                   help_text='This should have the following file extensions: ' +
                                             '<code>.ipa</code> for iOS and <code>.apk</code> for Android apps')

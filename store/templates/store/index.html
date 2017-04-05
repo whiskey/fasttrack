@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FastTrack</title>
+    <meta name="description" content="My little AppStore">
+    <link rel="stylesheet" type="text/css" href="{% static 'store/style.css' %}" />
+</head>
+<body>
+
+<div id="applist">
+    {% if app_list %}
+    <ul>
+        {% for app in app_list %}
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No applications available.</p>
+    {% endif%}
+</div>
+</body>
+</html>
