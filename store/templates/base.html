@@ -8,13 +8,16 @@
     <title>{% block title %}{% endblock %}</title>
     <meta name="description" content="My little AppStore">
     <link rel="stylesheet" type="text/css" href="{% static 'store/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'store/buttons.css' %}" />
 </head>
 <body>
 
+{% block auth %}
 <div class="authentication-container">
 {% if user.is_authenticated %}
+    <p id="greeter">Hello {{ user.username }}</p>
     <ul>
-        <li><a href="{% url 'logout' %}">logout</a></li>
+        <li><a href="{% url 'logout' %}" class="">logout</a></li>
     </ul>
 {% else %}
     <ul>
@@ -23,6 +26,7 @@
     </ul>
 {% endif %}
 </div>
+{% endblock %}
 
 <div class="content-container">
     {% block content %}

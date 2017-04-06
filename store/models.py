@@ -1,5 +1,4 @@
 from django.db import models
-from fasttrack.settings import UPLOADS_ROOT
 
 
 class MobileApp(models.Model):
@@ -17,12 +16,12 @@ class MobileApp(models.Model):
     # currently one app per platform - might change later!
     app_platform = models.CharField(max_length=1, choices=APPLICATION_PLATFORM, default='0')
     # FIXME: join uploads root with app id
-    app_binary = models.FileField(upload_to=UPLOADS_ROOT, verbose_name='Application Binary',
+    app_binary = models.FileField(upload_to='binaries', verbose_name='Application Binary',
                                   help_text='This should have the following file extensions: ' +
                                             '<code>.ipa</code> for iOS and <code>.apk</code> for Android apps')
-    app_icon = models.FileField(upload_to=UPLOADS_ROOT, verbose_name='Icon',
-                                help_text='An application icon. Recommended size 512x512px')
-    app_manifest = models.FileField(upload_to=UPLOADS_ROOT, blank=True, null=True, verbose_name='Manifest',
+    app_icon = models.ImageField(upload_to='icons', verbose_name='Icon',
+                                 help_text='An application icon. Recommended size 512x512px')
+    app_manifest = models.FileField(upload_to='manifests', blank=True, null=True, verbose_name='Manifest',
                                     help_text='[Optional] field for iOS manifest files (<code>.plist</code>)')
 
     last_modified = models.DateTimeField(auto_now=True)

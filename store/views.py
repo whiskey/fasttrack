@@ -18,7 +18,10 @@ def home(request):
 @login_required(login_url='/login/')
 def detail(request, app_id):
     app = get_object_or_404(MobileApp, pk=app_id)
-    return HttpResponse(app)
+    context = {
+        'app': app
+    }
+    return render(request, 'store/detail.html', context)
 
 
 def signup(request):

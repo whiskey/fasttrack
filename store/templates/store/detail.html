@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}FastTrack – {{ app.name }}{% endblock %}
+
+{% block content %}
+    <h2 class="centered">{{ app.name }}</h2>
+    <p class="app-version">{{ app.version }}</p>
+    <img src="{{ app.app_icon.url }}" alt="{{ app.name }} icon" class="icon-large centered-img" />
+    <p class="description">{{ app.description }}</p>
+
+    <a href="http://google.com" id="download-button" class="button button-action button-pill">Install App</a>
+{% endblock %}

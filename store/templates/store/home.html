@@ -4,9 +4,23 @@
 
 {% block content %}
     {% if user.is_authenticated %}
+    <h2>Available Applications</h2>
     {% if app_list %}
-    <ul>
+    <ul id="applist">
         {% for app in app_list %}
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
+        <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
         <li><a href="{% url 'store:detail' app.id %}">{{ app.name }}</a></li>
         {% endfor %}
     </ul>

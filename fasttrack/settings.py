@@ -61,6 +61,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
+                'django.template.context_processors.media',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -102,7 +103,5 @@ LOGIN_REDIRECT_URL = 'store:home'
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-
-# application file space
-UPLOADS_ROOT = os.path.join(BASE_DIR, 'uploads/apps')
-os.makedirs(UPLOADS_ROOT, exist_ok=True)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/uploads/'
