@@ -1,3 +1,7 @@
+body {
+    background-color: #42abf8;
+}
+
 li a, a:visited {
     color: #2c7439;
 }
