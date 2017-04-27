@@ -8,9 +8,16 @@ from store.models import MobileApp
 
 
 def home(request):
-    apps = MobileApp.objects.all
+    apps = MobileApp.objects.all()
+    filtered = []
+
+    for app in apps:
+        permission = 'store.can_access_{}'.format(app.normalized_name)
+        if request.user.has_perm(permission):
+            filtered.append(app)
+
     context = {
-        'app_list': apps
+        'app_list': filtered
     }
     return render(request, 'store/home.html', context)
 
