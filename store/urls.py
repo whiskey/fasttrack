@@ -8,5 +8,5 @@ urlpatterns = [
     url(r'^app/(?P<app_id>[0-9]+)$', views.detail, name='detail'),
 
     url(r'^$', views.showroom, name='showroom'),
-    url(r'^demoapp$', views.demoapp, name='demoapp'),
+    url(r'^demoapp/$', views.demoapp, name='demoapp'),
 ]
