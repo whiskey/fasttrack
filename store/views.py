@@ -1,7 +1,6 @@
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from django.http.response import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 
 from store.models import MobileApp
@@ -44,3 +43,13 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
+
+
+@login_required(login_url='/login/')
+def showroom(request):
+    return render(request, 'store/showroom.html')
+
+
+@login_required(login_url='/login/')
+def demoapp(request):
+    return render(request, 'store/demoapp.html')

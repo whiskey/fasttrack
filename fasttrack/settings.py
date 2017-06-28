@@ -49,7 +49,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django_user_agents.middleware.UserAgentMiddleware',
 )
+
+# 'default' would use default caching, which is recommended
+USER_AGENTS_CACHE = None
 
 ROOT_URLCONF = 'fasttrack.urls'
 

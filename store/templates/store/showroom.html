@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Showroom{% endblock %}
+
+{% block auth%}{# no auth header here! #}{% endblock %}
+
+{% block content %}
+    <h1>I want to…</h1>
+
+    <a class="hidden-link" href="http://lienemann-development.net/http/adapt/#/">
+        <div class="box">
+            <h3>access mobile learning</h3>
+        </div>
+    </a>
+
+    {% if request.user_agent.is_mobile %}
+    <a class="hidden-link" href="/demoapp">
+        <div class="box">
+            <h3>download apps</h3>
+        </div>
+    </a>
+    {% else %}
+    <div class="box">
+        <span>It looks like you reached this page via desktop browser. To Directly download the iOS or Android mobile application please browse this page on your mobile devce.</span>
+    </div>
+    {% endif %}
+{% endblock %}
