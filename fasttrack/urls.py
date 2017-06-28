@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^signup/$', signup, name='signup'),
 
-    url(r'^', include('store.urls')),
+    url(r'^showcase', include('store.urls')),
 ]
 
 if settings.DEBUG:
