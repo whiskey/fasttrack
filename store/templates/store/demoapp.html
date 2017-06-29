@@ -7,24 +7,21 @@
 
 {% block content %}
 {% if request.user_agent.os.family == 'iOS' %}
-    <h1>Adapt Demo App</h1>
-    <p>
-        <a href="itms-services://?action=download-manifest&url={% static 'demoapp/adapt.manifest.plist' %}">
+    <h1 class="centered">Adapt Demo App</h1>
+    <a href="itms-services://?action=download-manifest&url={% static 'demoapp/adapt.manifest.plist' %}">
           <img class="centered-img app-icon" src="{% static 'demoapp/adapt.512x512.png' %}" alt="Adapt App" />
         </a>
-        (Tap the icon to download)
-    </p>
+    <p class="centered">(Tap the icon to download)</p>
     <h3>Please note!</h3>
     <p>You might run into a system message after the download that the app is from an 'untrusted developer'. If you see this, please follow <a href="http://www.imore.com/how-install-enterprise-apps-ios-9">this guide</a>.</p>
 {% elif request.user_agent.os.family == 'Android' %}
-    <h1>Adapt Demo App</h1>
-    <p>
-        <a href="{% static 'demoapp/EYMobileLearning.apk' %}">
+    <h1 class="centered">Adapt Demo App</h1>
+    <a href="{% static 'demoapp/EYMobileLearning.apk' %}">
           <img class="centered-img app-icon" src="{% static 'demoapp/adapt.512x512.png' %}" alt="Adapt App" />
         </a>
-        (Tap the icon to download)
-    </p>
+    <p class="centered">(Tap the icon to download)</p>
 {% else %}
-    <p>other</p>
+    <h1 class="centered">Ooops.</h1>
+    <p>It looks like you reached this page via device other than iOS or Android. Unfortunately we don't provide apps for other platform than those two. Please feel free to check out the <a class="hidden-link" href="http://lienemann-development.net/http/adapt/#/">web view</a>.</p>
     {% endif %}
 {% endblock %}

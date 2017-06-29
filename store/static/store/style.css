@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #00a3ae;
+    background-color: #f0f0f0;
     color: #333333;
     font-family: eyInterstate;
 }
@@ -59,9 +59,25 @@ li a, a:visited {
     text-decoration: none;
 }
 
+/** authentication **/
+
 .auth-form {
-    /* ... */
+    margin: auto;
+    display: inline-block;
+    text-align: right;
 }
+
+.centerbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.centerbox > * > button {
+    background: #ffe600;
+    width: 100%;
+}
+
+/** app list **/
 
 #applist {
     list-style: none;
@@ -88,7 +104,6 @@ li a, a:visited {
 
 .centered {
     text-align: center;
-    margin: auto;
 }
 
 .centered-img {
