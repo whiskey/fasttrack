@@ -1,17 +1,20 @@
+@font-face {
+    font-family: eyInterstate;
+    src: url(EYInterstate-Regular.ttf);
+}
+
 body {
-    background-color: #42abf8;
+    background-color: #00a3ae;
+    color: #333333;
+    font-family: eyInterstate;
 }
 
 li a, a:visited {
-    color: #2c7439;
-}
-
-h2 {
-    color: #a41515;
+    color: #336699;
 }
 
 .authentication-container {
-    background-color: #c2c2c2;
+    background-color: #7fd1d6;
     min-width: 120px;
 }
 
@@ -32,7 +35,7 @@ h2 {
     display: inline-block;
     width: 100px;
     text-align: right;
-    background: #f5dd5d;
+    background: #f04c3e;
 }
 
 .content-container {
@@ -52,7 +55,7 @@ h2 {
 }
 
 .hidden-link, .hidden-link:visited {
-    color: #000;
+    color: #333333;
     text-decoration: none;
 }
 

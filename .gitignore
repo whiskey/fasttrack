@@ -96,3 +96,5 @@ db.sqlite3
 uploads/
 # collected static files
 static/
+# ...but not the static django files
+!store/static
