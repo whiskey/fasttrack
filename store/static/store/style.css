@@ -37,6 +37,18 @@ li a, a:visited {
     color: #336699;
 }
 
+input {
+    border-style: hidden;
+    min-height: 20px;
+    font-size: large;
+}
+button {
+    min-height: 28px;
+    border-style: hidden;
+    font-size: large;
+    font-weight: 500;
+}
+
 .authentication-container {
     background-color: #7fd1d6;
     min-width: 120px;
@@ -74,10 +86,11 @@ li a, a:visited {
     color: #333333;
     height: 25%;
     max-height: 140px;
-    border: 2px solid #333333;
     margin-bottom: 10px;
     text-align: center;
+    vertical-align: middle;
     font-size: larger;
+    font-weight: bold;
     padding: 10px;
 }
 
