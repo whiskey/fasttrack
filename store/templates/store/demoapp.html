@@ -8,7 +8,7 @@
 {% block content %}
 {% if request.user_agent.os.family == 'iOS' %}
     <h2 class="centered">Adapt Demo App</h2>
-    <a href="itms-services://?action=download-manifest&url={% static 'demoapp/adapt.manifest.plist' %}">
+    <a href="itms-services://?action=download-manifest&url=https://staticline.de{% static 'demoapp/adapt.manifest.plist' %}">
           <img class="centered-img app-icon" src="{% static 'demoapp/adapt.512x512.png' %}" alt="Adapt App" />
         </a>
     <p class="centered">(Tap the icon to download)</p>
@@ -16,7 +16,7 @@
     <p>You might run into a system message after the download that the app is from an 'untrusted developer'. If you see this, please follow <a href="http://www.imore.com/how-install-enterprise-apps-ios-9">this guide</a>.</p>
 {% elif request.user_agent.os.family == 'Android' %}
     <h2 class="centered">Adapt Demo App</h2>
-    <a href="{% static 'demoapp/EYMobileLearning.apk' %}">
+    <a href="https://staticline.de{% static 'demoapp/EYMobileLearning.apk' %}">
           <img class="centered-img app-icon" src="{% static 'demoapp/adapt.512x512.png' %}" alt="Adapt App" />
         </a>
     <p class="centered">(Tap the icon to download)</p>
