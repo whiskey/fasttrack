@@ -13,7 +13,7 @@
         </div>
     </a>
 
-    {% if request.user_agent.is_mobile %}
+    {% if request.user_agent.is_mobile or request.user_agent.is_tablet %}
     <a class="hidden-link" href="./demoapp/">
         <div class="box">
             <p>download apps</p>
