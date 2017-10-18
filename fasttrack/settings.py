@@ -25,7 +25,7 @@ SECRET_KEY = '-gm(f=e)sa32=^acx5l$o=b-8vw@j45=-dn9d@&ychsz(ble41'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'staticline.de']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.staticline.de', '.adapt.rocks']
 
 
 # Application definition
